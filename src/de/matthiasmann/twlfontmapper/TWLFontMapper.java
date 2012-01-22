@@ -117,7 +117,6 @@ public class TWLFontMapper implements FontMapper {
         fontAlias.put(from, new StringList(to, list));
     }
     
-    @Override
     public Font getFont(StringList fontFamilies, int fontSize, int style,
             StateSelect select, FontParameter ... parameterList) {
         if(fontFamilies == null) {
@@ -211,7 +210,6 @@ public class TWLFontMapper implements FontMapper {
         }
     }
     
-    @Override
     public boolean registerFont(String fontFamily, int style, URL url) {
         if(fontFamily.indexOf(',') >= 0) {
             throw new IllegalArgumentException("fontFamily must not contain a ','");
@@ -246,7 +244,6 @@ public class TWLFontMapper implements FontMapper {
         return true;
     }
 
-    @Override
     public boolean registerFont(String fontFamily, URL url) throws IOException {
         if(fontFamily.indexOf(',') >= 0) {
             throw new IllegalArgumentException("fontFamily must not contain a ','");
@@ -410,7 +407,6 @@ public class TWLFontMapper implements FontMapper {
         }
     }
     
-    @Override
     public void destroy() {
         for(FontData fd : fontData.values()) {
             for(TTFFontRenderer f : fd.fontRenderers.values()) {

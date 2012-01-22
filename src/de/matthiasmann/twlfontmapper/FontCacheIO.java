@@ -111,7 +111,6 @@ public class FontCacheIO {
      */
     public Runnable createWriteCallabck() {
         return new Runnable() {
-            @Override
             public void run() {
                 try {
                     write();

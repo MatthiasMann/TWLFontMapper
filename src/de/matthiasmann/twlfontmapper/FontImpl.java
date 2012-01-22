@@ -53,42 +53,34 @@ class FontImpl implements Font {
         this.fontParams = fontParams;
     }
 
-    @Override
     public FontCache cacheMultiLineText(FontCache prevCache, CharSequence str, int width, HAlignment align) {
         return null;
     }
 
-    @Override
     public FontCache cacheText(FontCache prevCache, CharSequence str) {
         return null;
     }
 
-    @Override
     public FontCache cacheText(FontCache prevCache, CharSequence str, int start, int end) {
         return null;
     }
 
-    @Override
     public int computeMultiLineTextWidth(CharSequence str) {
         return font.computeMultiLineTextWidth(str);
     }
 
-    @Override
     public int computeTextWidth(CharSequence str) {
         return font.computeTextWidth(str, 0, str.length());
     }
 
-    @Override
     public int computeTextWidth(CharSequence str, int start, int end) {
         return font.computeTextWidth(str, start, end);
     }
 
-    @Override
     public int computeVisibleGlpyhs(CharSequence str, int start, int end, int width) {
         return font.computeVisibleGlpyhs(str, start, end, width);
     }
 
-    @Override
     public int drawMultiLineText(AnimationState as, int x, int y, CharSequence str, int width, HAlignment align) {
         FontParameter fontParam = evalFontParam(as);
         int numLines = 0;
@@ -102,12 +94,10 @@ class FontImpl implements Font {
         return numLines;
     }
 
-    @Override
     public int drawText(AnimationState as, int x, int y, CharSequence str) {
         return drawText(as, x, y, str, 0, str.length());
     }
 
-    @Override
     public int drawText(AnimationState as, int x, int y, CharSequence str, int start, int end) {
         FontParameter fontParam = evalFontParam(as);
         int width = 0;
@@ -143,37 +133,30 @@ class FontImpl implements Font {
         GL11.glEnable(GL11.GL_TEXTURE_2D);
     }
 
-    @Override
     public int getBaseLine() {
         return font.baseLine;
     }
 
-    @Override
     public int getEM() {
         return font.lineHeight;
     }
 
-    @Override
     public int getEX() {
         return font.ex;
     }
 
-    @Override
     public int getLineHeight() {
         return font.lineHeight;
     }
 
-    @Override
     public int getSpaceWidth() {
         return font.spaceWidth;
     }
 
-    @Override
     public boolean isProportional() {
         return font.proportional;
     }
 
-    @Override
     public void destroy() {
         font.destroy();
     }
